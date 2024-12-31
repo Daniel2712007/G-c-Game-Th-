@@ -1,2 +1,2 @@
-# G-c-Game-Th-
+# Goc-Game-Thu
 Games-Rating
