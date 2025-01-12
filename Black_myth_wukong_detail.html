@@ -82,9 +82,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb__links">
-                        <a href="./index.html"><i class="fa fa-home"></i> Home</a>
-                        <a href="./categories.html">Categories</a>
-                        <span>Romance</span>
+                        <a href="./index.html"><i class="fa fa-home"></i> Trang chủ</a>
+                        <span>Black Myth Wukong</span>
                     </div>
                 </div>
             </div>
@@ -106,17 +105,86 @@
                     <div class="col-lg-9">
                         <div class="anime__details__text">
                             <div class="anime__details__title">
-                                <h3>Fate Stay Night: Unlimited Blade</h3>
-                                <span>フェイト／ステイナイト, Feito／sutei naito</span>
+                                <h3>Black Myth Wukong</h3>
+                                <span>Phát triển bởi:<b>Game Science</b></span>
                             </div>
+                        <div>
                             <div class="anime__details__rating">
                                 <div class="rating">
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star-half-o"></i></a>
+                                    <span class="star" data-value="1">&#9733;</span>
+                                    <span class="star" data-value="2">&#9733;</span>
+                                    <span class="star" data-value="3">&#9733;</span>
+                                    <span class="star" data-value="4">&#9733;</span>
+                                    <span class="star" data-value="5">&#9733;</span>
                                 </div>
+                                <div id="rating-result"></div>
+                                
+                                <style>
+                                    body {
+                                        font-family: Arial, sans-serif;
+                                        text-align: center;
+                                        padding: 20px;
+                                    }
+                                
+                                    .star-rating {
+                                        display: inline-block;
+                                    }
+                                
+                                    .star {
+                                        font-size: 50px;
+                                        color: #ddd;
+                                        cursor: pointer;
+                                        transition: color 0.2s;
+                                    }
+                                
+                                    .star:hover,
+                                    .star.selected {
+                                        color: gold;
+                                    }
+                                </style>
+                                
+                                <script>
+                                    const stars = document.querySelectorAll('.star');
+                                    const ratingResult = document.getElementById('rating-result');
+                                
+                                    stars.forEach(star => {
+                                        star.addEventListener('click', () => {
+                                            const rating = star.getAttribute('data-value');
+                                            
+                                            // Set selected stars
+                                            stars.forEach(s => {
+                                                if (s.getAttribute('data-value') <= rating) {
+                                                    s.classList.add('selected');
+                                                } else {
+                                                    s.classList.remove('selected');
+                                                }
+                                            });
+                                
+                                            // Show rating result
+                                            ratingResult.textContent = `You rated this game: ${rating} stars`;
+                                        });
+                                
+                                        // Hover effect for showing rating
+                                        star.addEventListener('mouseover', () => {
+                                            stars.forEach(s => {
+                                                if (s.getAttribute('data-value') <= star.getAttribute('data-value')) {
+                                                    s.style.color = 'gold';
+                                                } else {
+                                                    s.style.color = '#ddd';
+                                                }
+                                            });
+                                        });
+                                
+                                        star.addEventListener('mouseout', () => {
+                                            stars.forEach(s => {
+                                                if (!s.classList.contains('selected')) {
+                                                    s.style.color = '#ddd';
+                                                }
+                                            });
+                                        });
+                                    });
+                                </script>
+                            </div>
                                 <span>1.029 Votes</span>
                             </div>
                             <p>Every human inhabiting the world of Alcia is branded by a “Count” or a number written on
