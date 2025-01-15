@@ -1,6 +1,6 @@
 .zoom-container {
   width: 100%; /* Có thể điều chỉnh kích thước phù hợp */
-  height: 300px; /* Chiều cao phù hợp với ảnh nền */
+  height: 100%; /* Chiều cao phù hợp với ảnh nền */
   background-size: cover;
   background-position: center;
   position: relative;
