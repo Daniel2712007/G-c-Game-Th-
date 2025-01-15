@@ -12,25 +12,27 @@ body {
   overflow: hidden;
   width: 300px;
   height: 200px;
-  border: 5px solid #ccc; /* Keep the border color as is */
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px; /* Optional: rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: shadow effect */
   margin: 10px; /* Space between images */
-  transition: transform 0.3s ease; /* Only transition the scale */
+  transition: transform 0.3s ease; /* Smooth zoom effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .zoom-container img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* Ensures the image covers the container while preserving aspect ratio */
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .zoom-container:hover {
-  transform: scale(1.2); /* Zooms the whole container, including the border */
+  transform: scale(1.2); /* Zoom the whole container */
 }
 
 .zoom-container:hover img {
   transform: scale(1); /* Keeps the image scale constant relative to the container */
-  filter: brightness(1.2);
+  filter: brightness(1.2); /* Optional: increase brightness when zoomed */
 }
