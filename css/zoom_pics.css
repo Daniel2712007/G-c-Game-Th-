@@ -1,20 +1,25 @@
 .zoom-container {
-  width: 100px; /* Có thể điều chỉnh kích thước phù hợp */
-  height: 100px; /* Chiều cao phù hợp với ảnh nền */
-  background-size: cover;
-  background-position: center;
-  position: relative;
+  height: 325px; /* Set the desired height */
+  position: relative; /* Positioning relative to the container */
+  overflow: hidden; /* Ensure content inside doesn't overflow */
   display: flex;
   justify-content: center;
   align-items: center;
   transition: transform 0.3s ease;
 }
 
-.zoom-container:hover {
-  transform: scale(1.2); /* Phóng to container */
+.zoom-container img {
+  width: 100%; /* Image will take up the full width of the container */
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container, preserving aspect ratio */
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-/* Tăng độ sáng cho phần tử nếu cần */
 .zoom-container:hover {
-  filter: brightness(1.2); /* Tăng độ sáng khi zoom */
+  transform: scale(1.2); /* Zoom the whole container */
+}
+
+.zoom-container:hover img {
+  transform: scale(1.1); /* Zoom the image */
+  filter: brightness(1.2); /* Optional: increase brightness when zoomed */
 }
