@@ -1,0 +1,36 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f4f4f4;
+  flex-wrap: wrap; /* Allow images to wrap in a grid */
+}
+
+.zoom-container {
+  overflow: hidden;
+  width: 300px;
+  height: 200px;
+  border: 5px solid #ccc; /* Keep the border color as is */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 10px; /* Space between images */
+  transition: transform 0.3s ease; /* Only transition the scale */
+}
+
+.zoom-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.zoom-container:hover {
+  transform: scale(1.2); /* Zooms the whole container, including the border */
+}
+
+.zoom-container:hover img {
+  transform: scale(1); /* Keeps the image scale constant relative to the container */
+  filter: brightness(1.2);
+}
