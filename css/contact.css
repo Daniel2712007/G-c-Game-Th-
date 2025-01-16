@@ -1,17 +1,61 @@
+/* General Styling */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #0b0c2a;
     color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
-.container {
+/* Header */
+.header {
     text-align: center;
-    max-width: 600px;
+    padding: 20px 0;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* Team Section */
+.team-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.team-member {
+    background-color: #1a1b3a;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+}
+
+.team-member img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.team-member h2 {
+    margin: 10px 0;
+    font-size: 1.5em;
+}
+
+.team-member p {
+    margin: 10px 0;
+    font-size: 0.95em;
+    line-height: 1.5;
 }
 
 a {
