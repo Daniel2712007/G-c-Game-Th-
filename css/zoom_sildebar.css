@@ -1,6 +1,6 @@
 .zoom-container {
-  height: 325px; /* Set the desired height */
-  position: relative; /* Positioning relative to the container */
+  height: 190px;
+	position: relative;
   overflow: hidden; /* Ensure content inside doesn't overflow */
   display: flex;
   justify-content: center;
