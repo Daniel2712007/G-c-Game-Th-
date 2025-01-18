@@ -1,9 +1,9 @@
 document.getElementById("date").addEventListener("input", function() {
   let value = this.value;
   
-  // Loại bỏ tất cả ký tự không phải số hoặc dấu "/"
+  // Loại bỏ tất cả ký tự không phải số và dấu "/"
   value = value.replace(/[^0-9/]/g, '');
-
+  
   // Đảm bảo định dạng DD/MM/YYYY
   let parts = value.split('/');
   
@@ -28,6 +28,6 @@ document.getElementById("date").addEventListener("input", function() {
     if (parseInt(parts[2]) > 9999) parts[2] = '9999'; // Giới hạn năm tối đa là 9999
   }
 
-  // Ghép lại ngày/tháng/năm
-  this.value = parts.join('/');
+  // Ghép lại ngày/tháng/năm, chỉ có 2 dấu "/"
+  this.value = parts.filter(Boolean).join('/');
 });
