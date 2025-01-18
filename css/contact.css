@@ -105,3 +105,9 @@ main.main-page a {
     text-decoration: none;
     font-weight: bold;
 }
+/* Giới hạn chiều rộng phần login trong team-member */
+main.main-page .team-member .login__social__links ul li a {
+    width: 100%; /* Chiều rộng tối đa vừa với khung */
+    padding: 10px 0;
+    font-size: 12px;
+}
