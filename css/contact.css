@@ -104,43 +104,4 @@ main.main-page a {
     color: #4caf50;
     text-decoration: none;
     font-weight: bold;
-main.main-page .login__social__links ul li {
-	list-style: none;
-	margin-bottom: 15px;
-}
-
-main.main-page .login__social__links ul li:last-child {
-	margin-bottom: 0;
-}
-
-main.main-page .login__social__links ul li a {
-	color: #ffffff;
-	display: block;
-	font-size: 13px;
-	font-weight: 700;
-	letter-spacing: 2px;
-	text-transform: uppercase;
-	width: 460px;
-	padding: 14px 0;
-	position: relative;
-	margin: 0 auto;
-}
-
-main.main-page .login__social__links ul li a.facebook {
-	background: #4267b2;
-}
-
-main.main-page .login__social__links ul li a.google {
-	background: #ff4343;
-}
-
-main.main-page .login__social__links ul li a.twitter {
-	background: #1da1f2;
-}
-
-main.main-page .login__social__links ul li a i {
-	font-size: 20px;
-	position: absolute;
-	left: 32px;
-	top: 14px;
 }
