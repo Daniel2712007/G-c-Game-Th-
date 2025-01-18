@@ -105,9 +105,36 @@ main.main-page a {
     text-decoration: none;
     font-weight: bold;
 }
+
 /* Giới hạn chiều rộng phần login trong team-member */
 main.main-page .team-member .login__social__links ul li a {
     width: 100%; /* Chiều rộng tối đa vừa với khung */
     padding: 10px 0;
-    font-size: 6px;
+    font-size: 12px; /* Kích thước chữ */
+    text-align: center;
+    display: block; /* Căn giữa văn bản và icon */
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Kích thước và định dạng icon riêng cho từng nút */
+main.main-page .team-member .login__social__links ul li a.facebook i {
+    font-size: 18px; /* Kích thước icon Facebook */
+    color: #fff;
+}
+
+main.main-page .team-member .login__social__links ul li a.google i {
+    font-size: 20px; /* Kích thước icon Google */
+    color: #fff;
+}
+
+main.main-page .team-member .login__social__links ul li a.twitter i {
+    font-size: 16px; /* Kích thước icon Twitter */
+    color: #fff;
+}
+
+/* Hiệu ứng hover cho nút */
+main.main-page .team-member .login__social__links ul li a:hover {
+    opacity: 0.8; /* Hiệu ứng khi di chuột */
 }
