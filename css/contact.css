@@ -13,9 +13,13 @@ main.main-page .header-1 {
 }
 
 main.main-page .contact-header h1 {
-    margin: 0;
-    font-size: 100px;
-    color: white;
+	color: #000000;
+	font-weight: 600;
+	line-height: 21px;
+	text-transform: uppercase;
+	padding-left: 20px;
+	position: relative;
+	font-family: "Oswald", sans-serif;
 }
 main.main-page .contact p {
 	font-size: 15px;
