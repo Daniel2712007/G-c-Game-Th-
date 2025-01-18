@@ -109,5 +109,5 @@ main.main-page a {
 main.main-page .team-member .login__social__links ul li a {
     width: 100%; /* Chiều rộng tối đa vừa với khung */
     padding: 10px 0;
-    font-size: 12px;
+    font-size: 6px;
 }
