@@ -124,7 +124,8 @@ main.main-page .team-member .login__social__links ul li {
 main.main-page .team-member .login__social__links ul li a {
     display: flex; /* Flexbox để căn chỉnh */
     align-items: center; /* Căn giữa icon và chữ theo chiều dọc */
-    justify-content: center; /* Căn giữa nội dung */
+    justify-content: center; /* Căn giữa nội dung theo chiều ngang */
+    gap: 10px; /* Khoảng cách giữa icon và chữ */
     width: 100%;
     padding: 10px;
     font-size: 14px;
@@ -138,8 +139,8 @@ main.main-page .team-member .login__social__links ul li a {
 
 /* Icon Styling */
 main.main-page .team-member .login__social__links ul li a i {
-    margin-right: 10px; /* Khoảng cách giữa icon và chữ */
-    font-size: 20px; /* Kích thước icon */
+    font-size: 16px; /* Đồng bộ kích thước icon */
+    line-height: 1; /* Đảm bảo icon nằm ở giữa */
 }
 
 /* Button Colors */
