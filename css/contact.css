@@ -11,7 +11,9 @@ main.main-page .header-1 {
     text-align: center;
     padding: 20px 0;
 }
-
+main.main-page .contact-header h2 {
+	color: yellow;
+	font-family: "Oswald", sans-serif;
 main.main-page .contact-header h1 {
 	color: #ffffff;
    	text-align: center;
