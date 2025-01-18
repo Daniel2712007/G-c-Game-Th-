@@ -4,30 +4,32 @@ h3,
 h4,
 h5,
 h6 {
-	margin: 0;
-	color: #d49400;
-	font-weight: 400;
-	font-family: "Mulish", sans-serif;
+    margin: 0;
+    color: #d49400;
+    font-weight: 400;
+    font-family: "Mulish", sans-serif;
 }
+
 main.main-page h2 {
-	font-size: 36px;
+    font-size: 36px;
 }
 
 main.main-page h3 {
-	font-size: 30px;
+    font-size: 30px;
 }
 
 main.main-page h4 {
-	font-size: 24px;
+    font-size: 24px;
 }
 
 main.main-page h5 {
-	font-size: 18px;
+    font-size: 18px;
 }
 
 main.main-page h6 {
-	font-size: 16px;
+    font-size: 16px;
 }
+
 main.main-page {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -40,23 +42,25 @@ main.main-page .header-1 {
     text-align: center;
     padding: 20px 0;
 }
+
 main.main-page .contact-header h1 {
-	color: #ffffff;
-   	text-align: center;
-   	padding: 20px 0;
-	font-weight: 600;
-	font-size: 50px;
-	text-transform: uppercase;
-	font-family: "Oswald", sans-serif;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    font-weight: 600;
+    font-size: 50px;
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
 }
+
 main.main-page .contact p {
-	font-size: 15px;
-  	text-align: center;
-	font-family: "Mulish", sans-serif;
-	color: #bdbdbd;
-	font-weight: 400;
-	line-height: 25px;
-	margin: 0 0 15px 0;
+    font-size: 15px;
+    text-align: center;
+    font-family: "Mulish", sans-serif;
+    color: #bdbdbd;
+    font-weight: 400;
+    line-height: 25px;
+    margin: 0 0 15px 0;
 }
 
 /* Team Section */
@@ -107,41 +111,51 @@ main.main-page a {
 }
 
 /* Social Login Buttons */
+main.main-page .team-member .login__social__links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+main.main-page .team-member .login__social__links ul li {
+    margin: 5px 0;
+}
+
 main.main-page .team-member .login__social__links ul li a {
-    width: 100%; /* Chiều rộng tối đa vừa với khung */
-    padding: 10px 15px; /* Thêm padding để cân khoảng cách */
-    font-size: 14px; /* Kích thước chữ */
-    text-align: left; /* Căn chữ và icon theo chiều ngang */
-    display: flex; /* Sử dụng flexbox để căn chỉnh */
+    display: flex; /* Flexbox để căn chỉnh */
     align-items: center; /* Căn giữa icon và chữ theo chiều dọc */
-    justify-content: flex-start; /* Căn chữ và icon về phía trái */
+    justify-content: center; /* Căn giữa nội dung */
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
     margin: 5px 0;
     border-radius: 5px;
+    color: #fff;
     transition: all 0.3s ease;
 }
 
-/* Kích thước và định dạng icon */
+/* Icon Styling */
 main.main-page .team-member .login__social__links ul li a i {
-    font-size: 20px; /* Kích thước icon */
     margin-right: 10px; /* Khoảng cách giữa icon và chữ */
-    flex-shrink: 0; /* Đảm bảo icon không co lại */
-    color: #fff;
+    font-size: 20px; /* Kích thước icon */
 }
 
-/* Màu nền riêng cho từng nút */
+/* Button Colors */
 main.main-page .team-member .login__social__links ul li a.facebook {
-    background: #4267b2;
+    background-color: #4267b2;
 }
 
 main.main-page .team-member .login__social__links ul li a.google {
-    background: #ff4343;
+    background-color: #ff4343;
 }
 
 main.main-page .team-member .login__social__links ul li a.twitter {
-    background: #1da1f2;
+    background-color: #1da1f2;
 }
 
-/* Hiệu ứng hover cho nút */
+/* Hover Effects */
 main.main-page .team-member .login__social__links ul li a:hover {
     opacity: 0.8;
 }
