@@ -1,5 +1,5 @@
 /* General Styling */
-body.main-page {
+main.main-page {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #0b0c2a;
@@ -7,19 +7,19 @@ body.main-page {
 }
 
 /* Header */
-body.main-page .header-1 {
+main.main-page .header-1 {
     text-align: center;
     padding: 20px 0;
 }
 
-body.main-page .contact-header h1 {
+main.main-page .contact-header h1 {
     margin: 0;
     font-size: 2.5em;
     color: white;
 }
 
 /* Team Section */
-body.main-page .team-container {
+main.main-page .team-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -27,7 +27,7 @@ body.main-page .team-container {
     padding: 20px;
 }
 
-body.main-page .team-member {
+main.main-page .team-member {
     background-color: #1a1b3a;
     border-radius: 10px;
     padding: 20px;
@@ -37,29 +37,29 @@ body.main-page .team-member {
     transition: transform 0.3s;
 }
 
-body.main-page .team-member:hover {
+main.main-page .team-member:hover {
     transform: translateY(-10px);
 }
 
-body.main-page .team-member img {
+main.main-page .team-member img {
     border-radius: 50%;
     width: 100px;
     height: 100px;
     margin-bottom: 15px;
 }
 
-body.main-page .team-member h2 {
+main.main-page .team-member h2 {
     margin: 10px 0;
     font-size: 1.5em;
 }
 
-body.main-page .team-member p {
+main.main-page .team-member p {
     margin: 10px 0;
     font-size: 0.95em;
     line-height: 1.5;
 }
 
-body.main-page a {
+main.main-page a {
     color: #4caf50;
     text-decoration: none;
     font-weight: bold;
