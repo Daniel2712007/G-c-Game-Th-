@@ -9,6 +9,25 @@ h6 {
 	font-weight: 400;
 	font-family: "Mulish", sans-serif;
 }
+main.main-page h2 {
+	font-size: 36px;
+}
+
+main.main-page h3 {
+	font-size: 30px;
+}
+
+main.main-page h4 {
+	font-size: 24px;
+}
+
+main.main-page h5 {
+	font-size: 18px;
+}
+
+main.main-page h6 {
+	font-size: 16px;
+}
 main.main-page {
     margin: 0;
     font-family: Arial, sans-serif;
