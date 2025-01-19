@@ -22,7 +22,7 @@
     width: 50%; /* Chiếm 50% chiều ngang */
     padding: 20px;
     color: #fff; /* Màu chữ */
-    visibility: hidden; /* Ẩn nội dung nhưng giữ không gian */
+    visibility: visible; /* Hiển thị nội dung */
 }
 
 /* Logic giữ lại ảnh và không hiển thị viền/nền */
