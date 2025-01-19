@@ -1,40 +1,52 @@
-/* Định dạng phần tử lớn (large) */
-.product__item.large {
-  grid-column: span 3; /* Chiếm toàn bộ 3 cột trong lưới */
-  display: flex; /* Dùng flexbox để tách hình ảnh và văn bản */
-  align-items: flex-start; /* Căn các phần tử theo hướng trên cùng */
+/* Bố cục ngang */
+.product__item.horizontal {
+  display: flex; /* Căn ngang */
+  align-items: center; /* Căn giữa theo trục dọc */
   gap: 20px; /* Khoảng cách giữa ảnh và văn bản */
+  padding: 20px; /* Khoảng cách xung quanh */
+  border: 1px solid #ccc; /* Đường viền nếu cần */
+  border-radius: 10px; /* Góc bo tròn */
+  background-color: #222; /* Nền cho phần tử */
+  overflow: hidden; /* Đảm bảo nội dung không bị tràn */
 }
 
-/* Ảnh chiếm một nửa khung */
-.product__item.large .product__item__pic {
-  flex: 1; /* Ảnh chiếm 1 phần của flexbox */
-  height: 100%; /* Ảnh sẽ cao bằng nội dung */
-  background-size: cover;
-  background-position: center;
+/* Ảnh */
+.product__item__pic {
+  flex: 1; /* Chiếm một phần không gian ngang */
+  height: 200px; /* Chiều cao cố định, có thể thay đổi */
+  border-radius: 10px; /* Bo tròn góc ảnh */
 }
 
-/* Văn bản nằm bên trái */
-.product__item.large .product__item__text {
-  flex: 2; /* Văn bản chiếm nhiều không gian hơn */
-  text-align: left; /* Canh trái nội dung */
-  padding: 10px 0; /* Thêm khoảng cách trên/dưới nếu cần */
+/* Phần văn bản */
+.product__item__text {
+  flex: 2; /* Chiếm nhiều không gian hơn cho văn bản */
+  color: #fff; /* Màu chữ */
 }
 
-.product__item.large ul {
-  list-style: none;
+.product__item__text ul {
+  list-style: none; /* Bỏ dấu chấm đầu dòng */
   padding: 0;
-  margin: 0 0 10px 0; /* Khoảng cách giữa danh sách và phần còn lại */
+  display: flex;
+  gap: 10px; /* Khoảng cách giữa các mục */
 }
 
-.product__item.large h5 a {
+.product__item__text ul li {
+  background: #ff5722; /* Nền cho nhãn */
   color: #fff;
-  font-size: 24px; /* Làm nổi bật tiêu đề */
-  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px; /* Góc bo tròn */
+  font-size: 12px;
 }
 
-.product__item.large h6 {
-  font-size: 16px;
-  line-height: 1.6; /* Dễ đọc hơn */
-  color: #ccc;
+.product__item__text h5 a {
+  color: #ffdd57;
+  font-size: 18px;
+  text-decoration: none; /* Bỏ gạch chân */
+  font-weight: bold;
+}
+
+.product__item__text p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-top: 10px;
 }
