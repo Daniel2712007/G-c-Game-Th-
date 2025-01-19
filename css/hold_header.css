@@ -1,105 +1,11 @@
-/* Reset margin và padding để đảm bảo sự nhất quán */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Toàn bộ header được bao bọc trong lớp cha 'custom-header' */
-.custom-header {
-    position: fixed; /* Cố định header */
+/* CSS cho phần header cố định mà không thay đổi kiểu dáng */
+.gaming-header-container {
+    position: fixed;
     top: 0;
-    left: 0;
-    width: 100%; /* Header chiếm toàn bộ chiều ngang */
-    z-index: 1000; /* Luôn hiển thị trên cùng */
-    background-color: #0b0c2a;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hiệu ứng bóng */
-    padding: 15px 0;
+    width: 100%;
+    z-index: 1000; /* Đảm bảo header nằm trên cùng */
 }
 
-/* Container bên trong header */
-.custom-header .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Logo */
-.custom-header .header__logo img {
-    max-height: 50px;
-}
-
-/* Navigation menu */
-.custom-header .header__nav {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-
-.custom-header .header__menu {
-    display: flex;
-    list-style: none;
-}
-
-.custom-header .header__menu ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.custom-header .header__menu a {
-    color: #fff; /* Màu chữ */
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.custom-header .header__menu a:hover {
-    color: #f39c12; /* Màu chữ khi hover */
-}
-
-/* Dropdown menu */
-.custom-header .header__menu .dropdown {
-    display: none;
-    position: absolute;
-    background-color: #222;
-    padding: 10px;
-    border-radius: 5px;
-    top: 100%;
-    list-style: none;
-}
-
-.custom-header .header__menu li:hover .dropdown {
-    display: block;
-}
-
-/* Icons bên phải */
-.custom-header .header__right a {
-    color: #fff;
-    margin-left: 15px;
-    font-size: 18px;
-    transition: color 0.3s ease;
-}
-
-.custom-header .header__right a:hover {
-    color: #f39c12;
-}
-
-/* Responsive: Menu trên màn hình nhỏ */
-@media screen and (max-width: 768px) {
-    .custom-header .header__menu {
-        display: none; /* Ẩn menu chính */
-    }
-
-    .custom-header .mobile-menu {
-        display: block;
-    }
-}
-
-/* Phần nội dung chính bên dưới header */
-main.main-page {
-    margin-top: 100px; /* Đẩy nội dung xuống để tránh bị header che */
+body {
+    margin-top: 80px; /* Đẩy nội dung xuống dưới để tránh trùng với header */
 }
