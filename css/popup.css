@@ -1,54 +1,64 @@
-/* CSS cho thông báo */
-.popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #131324; /* Nền xanh đậm */
-    box-shadow: 0px 4px 15px rgba(255, 0, 0, 0.5); /* Ánh đỏ */
-    border: 2px solid #FF4D4D; /* Viền đỏ */
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    display: none; /* Ẩn mặc định */
-    z-index: 1000;
-    animation: fadeIn 0.5s;
-}
-
-.popup h3 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 20px;
-    color: #FFFFFF; /* Màu chữ trắng */
-}
-
-.popup button {
-    margin-top: 15px;
-    padding: 10px 20px;
-    font-size: 16px;
-    color: #FFFFFF;
-    background-color: #FF4D4D; /* Nút đỏ */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.popup button:hover {
-    background-color: #E63939; /* Đỏ đậm khi hover */
-}
-
+/* CSS cho nền mờ của popup */
 .popup-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Nền mờ */
+    background-color: rgba(0, 0, 0, 0.8); /* Mờ nền */
     display: none; /* Ẩn mặc định */
     z-index: 999;
-    pointer-events: none; /* Không ngăn chặn sự kiện */
+    pointer-events: none; /* Không ngăn sự kiện bên ngoài */
 }
 
-/* Hiệu ứng mờ dần */
+/* CSS cho khung popup */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 30px;
+    border-radius: 8px;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    display: none; /* Ẩn mặc định */
+    z-index: 1000;
+    animation: fadeIn 0.4s;
+}
+
+/* Giao diện cho thông báo lỗi */
+.popup.error {
+    background-color: #ff4d4d; /* Nền đỏ */
+    color: white;
+    border: 2px solid #e63939;
+}
+
+/* Giao diện cho thông báo thành công */
+.popup.success {
+    background-color: #4caf50; /* Nền xanh lá */
+    color: white;
+    border: 2px solid #3d8b3d;
+}
+
+/* Nút bên trong popup */
+.popup button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: white;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.popup button:hover {
+    background-color: #e0e0e0;
+}
+
+/* Hiệu ứng mờ dần khi hiển thị */
 @keyframes fadeIn {
     from {
         opacity: 0;
