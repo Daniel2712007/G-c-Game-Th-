@@ -4,13 +4,13 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #131324; /* Xanh đậm giống nền */
+    background-color: #131324; /* Nền xanh đậm */
     box-shadow: 0px 4px 15px rgba(255, 0, 0, 0.5); /* Ánh đỏ */
-    border: 2px solid #FF4D4D; /* Viền đỏ nổi bật */
+    border: 2px solid #FF4D4D; /* Viền đỏ */
     border-radius: 10px;
     padding: 20px;
     text-align: center;
-    display: none; /* Mặc định ẩn */
+    display: none; /* Ẩn mặc định */
     z-index: 1000;
     animation: fadeIn 0.5s;
 }
@@ -18,7 +18,7 @@
 .popup h3 {
     font-family: 'Oswald', sans-serif;
     font-size: 20px;
-    color: #FFFFFF; /* Màu chữ trắng nổi bật */
+    color: #FFFFFF; /* Màu chữ trắng */
 }
 
 .popup button {
@@ -26,14 +26,14 @@
     padding: 10px 20px;
     font-size: 16px;
     color: #FFFFFF;
-    background-color: #FF4D4D; /* Nút đỏ đồng bộ */
+    background-color: #FF4D4D; /* Nút đỏ */
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .popup button:hover {
-    background-color: #E63939; /* Đỏ đậm hơn khi hover */
+    background-color: #E63939; /* Đỏ đậm khi hover */
 }
 
 .popup-overlay {
@@ -42,12 +42,13 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Mờ nền tối */
-    display: none; /* Mặc định ẩn */
+    background-color: rgba(0, 0, 0, 0.8); /* Nền mờ */
+    display: none; /* Ẩn mặc định */
     z-index: 999;
+    pointer-events: none; /* Không ngăn chặn sự kiện */
 }
 
-/* Hiệu ứng */
+/* Hiệu ứng mờ dần */
 @keyframes fadeIn {
     from {
         opacity: 0;
