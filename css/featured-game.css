@@ -1,59 +1,92 @@
-/* Bố cục ngang */
-.product__item.horizontal {
-  display: flex; /* Căn ngang */
-  align-items: center; /* Căn giữa theo trục dọc */
-  gap: 20px; /* Khoảng cách giữa ảnh và văn bản */
-  padding: 20px; /* Khoảng cách xung quanh */
-  border: 1px solid #ccc; /* Đường viền nếu cần */
-  border-radius: 10px; /* Góc bo tròn */
-  background-color: #222; /* Nền cho phần tử */
-  overflow: hidden; /* Đảm bảo nội dung không bị tràn */
+/* Cấu hình chung cho khung ngang */
+.horizontal {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: transparent; /* Xóa nền */
+    border: none; /* Xóa viền */
+    box-shadow: none; /* Xóa đổ bóng */
 }
 
 /* Ảnh ngang */
 .horizontal-image {
-  flex: 1; /* Chiếm một phần không gian ngang */
-  height: 200px; /* Chiều cao cố định */
-  border-radius: 10px; /* Bo tròn góc ảnh */
+    width: 50%; /* Chiếm 50% chiều ngang */
+    height: auto; /* Giữ tỷ lệ ảnh */
+    background-size: cover; /* Đảm bảo ảnh lấp đầy khung */
+    background-position: center;
+    border-radius: 8px; /* Tạo góc bo tròn cho ảnh */
 }
 
-/* Phần văn bản */
+/* Phần nội dung ngang */
+.horizontal .product__item__text {
+    width: 50%; /* Chiếm 50% chiều ngang */
+    padding: 20px;
+    color: #fff; /* Màu chữ */
+}
+
+/* Ẩn thông tin khung nhưng giữ không gian */
+.horizontal .product__item__text {
+    visibility: hidden; /* Ẩn nội dung nhưng giữ không gian */
+}
+
+/* Logic giữ lại ảnh và không hiển thị viền/nền */
+.horizontal .product__item__pic,
+.horizontal .product__item__text {
+    visibility: visible; /* Đảm bảo ảnh hiển thị */
+    position: relative;  /* Giữ vị trí */
+}
+
+/* Đặt chung cho các mục game thông thường */
+.product__item {
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Viền nhạt */
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.product__item:hover {
+    transform: translateY(-5px); /* Hiệu ứng hover */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.product__item__pic {
+    width: 100%;
+    height: 300px; /* Chiều cao cố định cho ảnh */
+    background-size: cover;
+    background-position: center;
+}
+
 .product__item__text {
-  flex: 2; /* Chiếm nhiều không gian hơn cho văn bản */
-  color: #fff; /* Màu chữ */
+    padding: 15px;
+    text-align: center;
 }
 
 .product__item__text ul {
-  list-style: none; /* Bỏ dấu chấm đầu dòng */
-  padding: 0;
-  display: flex;
-  gap: 10px; /* Khoảng cách giữa các mục */
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
 }
 
 .product__item__text ul li {
-  background: #ff5722; /* Nền cho nhãn */
-  color: #fff;
-  padding: 5px 10px;
-  border-radius: 5px; /* Góc bo tròn */
-  font-size: 12px;
+    display: inline-block;
+    font-size: 12px;
+    background: #ff5c5c;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 5px;
 }
 
 .product__item__text h5 a {
-  color: #ffdd57;
-  font-size: 18px;
-  text-decoration: none; /* Bỏ gạch chân */
-  font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .product__item__text p {
-  font-size: 14px;
-  line-height: 1.6;
-  margin-top: 10px;
-}
-
-/* Thiết lập ảnh nền */
-.horizontal-image {
-  background-size: cover; /* Ảnh lấp đầy phần tử */
-  background-position: center; /* Hiển thị chính giữa */
-  background-repeat: no-repeat; /* Không lặp ảnh */
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
 }
