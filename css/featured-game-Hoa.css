@@ -1,5 +1,5 @@
-/* Cấu hình chung cho khung ngang */
-.horizontal {
+/* Cấu hình chung cho khung ngang của game Hoa */
+.horizontal-hoa {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
@@ -8,8 +8,8 @@
     box-shadow: none; /* Xóa đổ bóng */
 }
 
-/* Ảnh ngang */
-.horizontal-image {
+/* Ảnh ngang cho game Hoa */
+.horizontal-hoa-image {
     width: 50%; /* Chiếm 50% chiều ngang */
     height: auto; /* Giữ tỷ lệ ảnh */
     background-size: cover; /* Đảm bảo ảnh lấp đầy khung */
@@ -17,21 +17,16 @@
     border-radius: 8px; /* Tạo góc bo tròn cho ảnh */
 }
 
-/* Phần nội dung ngang */
-.horizontal .product__item__text {
+/* Phần nội dung ngang của game Hoa */
+.horizontal-hoa .product__item__text {
     width: 50%; /* Chiếm 50% chiều ngang */
     padding: 20px;
     color: #fff; /* Màu chữ */
-}
-
-/* Ẩn thông tin khung nhưng giữ không gian */
-.horizontal .product__item__text {
     visibility: hidden; /* Ẩn nội dung nhưng giữ không gian */
 }
 
 /* Logic giữ lại ảnh và không hiển thị viền/nền */
-.horizontal .product__item__pic,
-.horizontal .product__item__text {
+.horizontal-hoa .product__item__pic {
     visibility: visible; /* Đảm bảo ảnh hiển thị */
     position: relative;  /* Giữ vị trí */
 }
@@ -56,11 +51,6 @@
     background-position: center;
 }
 
-.product__item__text {
-    padding: 15px;
-    text-align: center;
-}
-
 .product__item__text ul {
     list-style: none;
     padding: 0;
@@ -70,17 +60,17 @@
     margin-bottom: 10px;
 }
 
-/* Giữ nguyên hiển thị phần "Hoạt động" và "Trả phí" */
-.product__item__text ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: flex-end; /* Di chuyển nội dung sang bên phải */
-    gap: 10px;
-    margin-bottom: 10px;
+/* Hiển thị các tag như "Hoạt động" và "Trả phí" */
+.product__item__text ul li {
+    display: inline-block;
+    font-size: 12px;
+    background: #ff5c5c;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 5px;
 }
 
-
+/* Tiêu đề game */
 .product__item__text h5 a {
     color: #fff;
     text-decoration: none;
