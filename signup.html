@@ -101,33 +101,33 @@
                 <div class="col-lg-6">
                     <div class="login__form">
                         <h3>Đặng ký</h3>
-                        <form action="#">
-                            <div class="input__item">
-                                <input type="email" placeholder="Địa chỉ email" style="font-weight: bold; color: #333;">
-                                <span class="icon_mail"></span>
-                            </div>
-                            <div class="input__item">
-                                <input type="text" placeholder="Tên hiển thị" style="font-weight: bold; color: #333;">
-                                <span class="icon_lock"></span>
-                            </div>
-                            <div class="input__item">
-                                <input type="text" id="name" placeholder="Tên tài khoản" style="font-weight: bold; color: #333;">
-                                <span class="icon_lock"></span>
-                            </div>
-                            <div class="input__item">
-                                <input type=date step=1 min=0001-01-01 placeholder="DD/MM/YYYY" style="font-weight: bold; color: #333;">
-                                <span class="icon_lock"></span>
-                            </div>
-                            <div class="input__item">
-                                <input type="password" placeholder="mật khẩu" style="font-weight: bold; color: #333;">
-                                <span class="icon_lock"></span>
-                            </div>
-                            <div class="input__item">
-                                <input type="password" placeholder="Xác nhận mật khẩu" style="font-weight: bold; color: #333;">
-                                <span class="icon_lock"></span>
-                            </div>
-                            <button type="submit" class="site-btn">Đăng ký ngay</button>
-                        </form>
+                            <form id="signupForm">
+                                <div class="input__item">
+                                    <input type="email" id="email" placeholder="Địa chỉ email" style="font-weight: bold; color: #333;">
+                                    <span class="icon_mail"></span>
+                                </div>
+                                <div class="input__item">
+                                    <input type="text" id="displayName" placeholder="Tên hiển thị" style="font-weight: bold; color: #333;">
+                                    <span class="icon_lock"></span>
+                                </div>
+                                <div class="input__item">
+                                    <input type="text" id="username" placeholder="Tên tài khoản" style="font-weight: bold; color: #333;">
+                                    <span class="icon_lock"></span>
+                                </div>
+                                <div class="input__item">
+                                    <input type="date" id="dob" step="1" min="0001-01-01" style="font-weight: bold; color: #333;">
+                                    <span class="icon_lock"></span>
+                                </div>
+                                <div class="input__item">
+                                    <input type="password" id="password" placeholder="Mật khẩu" style="font-weight: bold; color: #333;">
+                                    <span class="icon_lock"></span>
+                                </div>
+                                <div class="input__item">
+                                    <input type="password" id="confirmPassword" placeholder="Xác nhận mật khẩu" style="font-weight: bold; color: #333;">
+                                    <span class="icon_lock"></span>
+                                </div>
+                                <button type="button" id="signupBtn" class="site-btn">Đăng ký ngay</button>
+                            </form>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -207,6 +207,7 @@
 <script src="js/main.js"></script>
 <script src="js/Number_only.js"></script>
 <script src="js/Username.js"></script>
+<script src="js/signup_validation.js"></script>
 
 
 </body>
