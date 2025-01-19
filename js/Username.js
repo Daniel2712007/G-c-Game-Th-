@@ -1,4 +1,5 @@
-document.getElementById("name").addEventListener("input", function() {
-  // Cho phép chữ cái, số và các ký tự đặc biệt
-  this.value = this.value.replace(/[^a-zA-Z0-9!@#$%^&*(),.?":{}|<>_-+=]/g, '');
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById("name").addEventListener("input", function() {
+    this.value = this.value.replace(/[^a-zA-Z0-9!@#$%^&*(),.?":{}|<>_-+=]/g, '');
+  });
 });
