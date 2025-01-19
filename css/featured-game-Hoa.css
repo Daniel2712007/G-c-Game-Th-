@@ -21,7 +21,6 @@
 .horizontal-hoa .product__item__text_Hoa {
     width: 50%; /* Chiếm 50% chiều ngang */
     padding: 20px;
-    color: #fff; /* Màu chữ */
     visibility: visible; /* Hiển thị nội dung */
 }
 
@@ -63,16 +62,11 @@
 /* Hiển thị các tag như "Hoạt động" và "Trả phí" */
 .product__item__text_Hoa ul li {
     display: inline-block;
-    font-size: 12px;
-    background: #ff5c5c;
-    color: #fff;
     padding: 2px 8px;
-    border-radius: 5px;
 }
 
 /* Tiêu đề game */
 .product__item__text_Hoa h5 a {
-    color: #fff;
     text-decoration: none;
     font-weight: bold;
 }
