@@ -19,7 +19,8 @@
 
 /* Phần nội dung ngang của game Hoa */
 .horizontal-hoa .product__item__text_Hoa {
-    width: 50%; /* Chiếm 50% chiều ngang */
+    width: 50%;
+    text-align: center;/* Chiếm 50% chiều ngang */
     padding: 20px;
     color: #fff; /* Màu chữ */
     visibility: visible; /* Hiển thị nội dung */
