@@ -1,18 +1,22 @@
 /* Kiểu hiển thị dạng lưới hiện tại */
-.game-container {
+.product-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 cột */
+  grid-template-columns: repeat(3, 1fr); /* 3 cột mặc định */
   gap: 20px;
 }
 
-.game-item {
+.product__item {
   background: #222;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
 }
 
-.game-item.large {
-  grid-column: span 3; /* Chiếm 3 cột, tức toàn bộ chiều ngang */
+.product__item.large {
+  grid-column: span 3; /* Đối với giao diện lưới, chiếm toàn bộ 3 cột */
   text-align: left;
+}
+
+.full-row {
+  grid-column: span 12; /* Nếu dùng flexbox hoặc bootstrap grid */
 }
