@@ -1,11 +1,10 @@
-/* CSS cho phần header cố định mà không thay đổi kiểu dáng */
-.gaming-header-container {
+.header {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000; /* Đảm bảo header nằm trên cùng */
+    z-index: 1000;
 }
 
 body {
-    margin-top: 80px; /* Đẩy nội dung xuống dưới để tránh trùng với header */
+    margin-top: 80px;
 }
