@@ -1,0 +1,18 @@
+/* Kiểu hiển thị dạng lưới hiện tại */
+.game-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cột */
+  gap: 20px;
+}
+
+.game-item {
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.game-item.large {
+  grid-column: span 3; /* Chiếm 3 cột, tức toàn bộ chiều ngang */
+  text-align: left;
+}
