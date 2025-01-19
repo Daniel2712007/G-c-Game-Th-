@@ -5,7 +5,7 @@ function randomizeNumberWithDeceleration(targetClassName, totalDuration) {
         const span = element.querySelector("span"); // Tìm thẻ <span> bên trong
         if (!span) return; // Bỏ qua nếu không có thẻ <span>
 
-        const finalNumber = parseInt(span.textContent, 10); // Lấy số từ nội dung thẻ <span>
+        const finalNumber = span.textContent.trim(); // Lấy số cuối cùng (dạng chuỗi)
         const totalSteps = 40; // Số bước
         const minInterval = 5; // Thời gian nhanh nhất giữa các bước (ms)
         const maxInterval = 200; // Thời gian chậm nhất giữa các bước (ms)
@@ -17,10 +17,17 @@ function randomizeNumberWithDeceleration(targetClassName, totalDuration) {
             return minInterval + (maxInterval - minInterval) * Math.pow(progress, 2); // Phi tuyến tính
         }
 
+        function generateRandomNumber(length) {
+            // Tạo một số ngẫu nhiên với đúng số chữ số
+            const min = Math.pow(10, length - 1); // Số nhỏ nhất với 'length' chữ số
+            const max = Math.pow(10, length) - 1; // Số lớn nhất với 'length' chữ số
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
         function updateNumber() {
             if (currentStep < totalSteps) {
                 currentStep++;
-                const randomValue = Math.floor(Math.random() * 100); // Tạo số ngẫu nhiên
+                const randomValue = generateRandomNumber(finalNumber.length); // Tạo số ngẫu nhiên có cùng độ dài
                 span.textContent = randomValue; // Cập nhật nội dung của thẻ <span>
 
                 // Tính thời gian chờ cho bước tiếp theo
