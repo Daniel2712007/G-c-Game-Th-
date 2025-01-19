@@ -70,6 +70,7 @@ main.main-page .team-container {
     flex-wrap: wrap;
     gap: 20px;
     padding: 20px;
+    overflow: visible; /* Đảm bảo nội dung không bị cắt */
 }
 
 main.main-page .team-member {
@@ -80,10 +81,8 @@ main.main-page .team-member {
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Tách phần đầu và cuối */
-    height: 400px; /* Chiều cao đồng nhất */
+    height: auto; /* Tự điều chỉnh chiều cao */
+    overflow: visible; /* Đảm bảo nội dung không bị cắt */
 }
 
 main.main-page .team-member:hover {
@@ -115,10 +114,6 @@ main.main-page a {
 }
 
 /* Social Login Buttons */
-main.main-page .team-member .login__social__links {
-    margin-top: auto; /* Đẩy phần liên lạc xuống cuối */
-}
-
 main.main-page .team-member .login__social__links ul {
     list-style: none;
     padding: 0;
@@ -130,7 +125,7 @@ main.main-page .team-member .login__social__links ul li {
 }
 
 main.main-page .team-member .login__social__links ul li a {
-    display: flex; /* Flexbox để căn chỉnh */
+    display: flex; /* Flexbox căn chỉnh */
     align-items: center; /* Căn giữa icon và chữ theo chiều dọc */
     justify-content: center; /* Căn giữa nội dung theo chiều ngang */
     gap: 10px; /* Khoảng cách giữa icon và chữ */
