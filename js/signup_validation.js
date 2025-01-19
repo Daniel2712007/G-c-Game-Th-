@@ -6,7 +6,7 @@ document.querySelector('form').addEventListener('submit', function (event) {
     const displayName = document.querySelector('input[placeholder="Tên hiển thị"]').value.trim();
     const username = document.querySelector('input[placeholder="Tên tài khoản"]').value.trim();
     const dob = document.querySelector('input[type="date"]').value.trim();
-    const password = document.querySelector('input[placeholder="mật khẩu"]').value.trim();
+    const password = document.querySelector('input[placeholder="Mật khẩu"]').value.trim();
     const confirmPassword = document.querySelector('input[placeholder="Xác nhận mật khẩu"]').value.trim();
 
     // Kiểm tra các trường
@@ -27,6 +27,11 @@ document.querySelector('form').addEventListener('submit', function (event) {
 
 // Hàm hiển thị popup
 function showPopup(message, redirect = false) {
+    // Kiểm tra nếu popup đã tồn tại
+    if (document.querySelector('.popup-overlay') || document.querySelector('.popup')) {
+        return;
+    }
+
     const overlay = document.createElement('div');
     overlay.classList.add('popup-overlay');
     document.body.appendChild(overlay);
@@ -48,7 +53,7 @@ function showPopup(message, redirect = false) {
         document.body.removeChild(popup);
         document.body.removeChild(overlay);
 
-        // Nếu chuyển hướng thì chuyển hướng sau khi đóng popup
+        // Nếu cần chuyển hướng
         if (redirect) {
             window.location.href = 'login.html';
         }
