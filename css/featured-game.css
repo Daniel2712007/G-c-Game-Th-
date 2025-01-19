@@ -71,14 +71,15 @@
 }
 
 /* Giữ nguyên hiển thị phần "Hoạt động" và "Trả phí" */
-.product__item__text ul li {
-    display: inline-block;
-    font-size: 12px;
-    background: #ff5c5c;
-    color: #fff;
-    padding: 2px 8px;
-    border-radius: 5px;
+.product__item__text ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end; /* Di chuyển nội dung sang bên phải */
+    gap: 10px;
+    margin-bottom: 10px;
 }
+
 
 .product__item__text h5 a {
     color: #fff;
