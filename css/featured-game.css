@@ -1,22 +1,40 @@
-/* Kiểu hiển thị dạng lưới hiện tại */
-.product-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 cột mặc định */
-  gap: 20px;
-}
-
-.product__item {
-  background: #222;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-}
-
+/* Định dạng phần tử lớn (large) */
 .product__item.large {
-  grid-column: span 3; /* Đối với giao diện lưới, chiếm toàn bộ 3 cột */
-  text-align: left;
+  grid-column: span 3; /* Chiếm toàn bộ 3 cột trong lưới */
+  display: flex; /* Dùng flexbox để tách hình ảnh và văn bản */
+  align-items: flex-start; /* Căn các phần tử theo hướng trên cùng */
+  gap: 20px; /* Khoảng cách giữa ảnh và văn bản */
 }
 
-.full-row {
-  grid-column: span 12; /* Nếu dùng flexbox hoặc bootstrap grid */
+/* Ảnh chiếm một nửa khung */
+.product__item.large .product__item__pic {
+  flex: 1; /* Ảnh chiếm 1 phần của flexbox */
+  height: 100%; /* Ảnh sẽ cao bằng nội dung */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Văn bản nằm bên trái */
+.product__item.large .product__item__text {
+  flex: 2; /* Văn bản chiếm nhiều không gian hơn */
+  text-align: left; /* Canh trái nội dung */
+  padding: 10px 0; /* Thêm khoảng cách trên/dưới nếu cần */
+}
+
+.product__item.large ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px 0; /* Khoảng cách giữa danh sách và phần còn lại */
+}
+
+.product__item.large h5 a {
+  color: #fff;
+  font-size: 24px; /* Làm nổi bật tiêu đề */
+  text-decoration: none;
+}
+
+.product__item.large h6 {
+  font-size: 16px;
+  line-height: 1.6; /* Dễ đọc hơn */
+  color: #ccc;
 }
