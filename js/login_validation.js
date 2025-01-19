@@ -55,7 +55,7 @@ function showPopup(message, redirect = false) {
 
         // Nếu cần chuyển hướng
         if (redirect) {
-            window.location.href = 'login.html';
+            window.location.href = 'index.html';
         }
     });
 }
