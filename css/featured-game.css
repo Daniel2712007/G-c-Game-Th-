@@ -10,10 +10,10 @@
   overflow: hidden; /* Đảm bảo nội dung không bị tràn */
 }
 
-/* Ảnh */
-.product__item__pic {
+/* Ảnh ngang */
+.horizontal-image {
   flex: 1; /* Chiếm một phần không gian ngang */
-  height: 200px; /* Chiều cao cố định, có thể thay đổi */
+  height: 200px; /* Chiều cao cố định */
   border-radius: 10px; /* Bo tròn góc ảnh */
 }
 
@@ -49,4 +49,11 @@
   font-size: 14px;
   line-height: 1.6;
   margin-top: 10px;
+}
+
+/* Thiết lập ảnh nền */
+.horizontal-image {
+  background-size: cover; /* Ảnh lấp đầy phần tử */
+  background-position: center; /* Hiển thị chính giữa */
+  background-repeat: no-repeat; /* Không lặp ảnh */
 }
