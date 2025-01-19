@@ -70,6 +70,7 @@
     margin-bottom: 10px;
 }
 
+/* Giữ nguyên hiển thị phần "Hoạt động" và "Trả phí" */
 .product__item__text ul li {
     display: inline-block;
     font-size: 12px;
