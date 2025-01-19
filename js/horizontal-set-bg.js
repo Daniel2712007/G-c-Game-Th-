@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Lấy tất cả các phần tử có lớp .set-bg
-  const setBgElements = document.querySelectorAll(".set-bg");
-  setBgElements.forEach((element) => {
+  // Lấy tất cả các phần tử có class .horizontal-image
+  const horizontalImages = document.querySelectorAll(".horizontal-image");
+  horizontalImages.forEach((element) => {
     const bg = element.getAttribute("data-setbg");
     if (bg) {
       // Đặt ảnh nền từ thuộc tính data-setbg
