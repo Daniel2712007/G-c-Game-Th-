@@ -1,42 +1,34 @@
 document.querySelector('form').addEventListener('submit', function (event) {
-    event.preventDefault(); // Ngăn không gửi form đi
+    event.preventDefault(); // Ngăn form gửi đi
 
     // Lấy giá trị từ các trường nhập liệu
     const email = document.querySelector('input[placeholder="Địa chỉ email"]').value.trim();
-    const displayName = document.querySelector('input[placeholder="Tên hiển thị"]').value.trim();
-    const username = document.querySelector('input[placeholder="Tên tài khoản"]').value.trim();
-    const dob = document.querySelector('input[type="date"]').value.trim();
     const password = document.querySelector('input[placeholder="Mật khẩu"]').value.trim();
-    const confirmPassword = document.querySelector('input[placeholder="Xác nhận mật khẩu"]').value.trim();
 
     // Kiểm tra các trường
-    if (!email || !displayName || !username || !dob || !password || !confirmPassword) {
-        showPopup("Vui lòng điền đầy đủ thông tin!");
+    if (!email || !password) {
+        showPopup("Vui lòng nhập đầy đủ thông tin!");
         return;
     }
 
-    // Kiểm tra mật khẩu khớp nhau
-    if (password !== confirmPassword) {
-        showPopup("Mật khẩu và xác nhận mật khẩu không khớp!");
-        return;
-    }
-
-    // Chuyển hướng đến trang đăng nhập
-    showPopup("Đăng ký thành công! Chuyển hướng đến trang đăng nhập...", true);
+    // Nếu thông tin hợp lệ
+    showPopup("Đăng nhập thành công!", true);
 });
 
-// Hàm hiển thị popup
+// Hàm hiển thị popup (giống như đã làm ở trang đăng ký)
 function showPopup(message, redirect = false) {
     // Kiểm tra nếu popup đã tồn tại
     if (document.querySelector('.popup-overlay') || document.querySelector('.popup')) {
         return;
     }
 
+    // Tạo overlay
     const overlay = document.createElement('div');
     overlay.classList.add('popup-overlay');
     document.body.appendChild(overlay);
     overlay.style.display = 'block';
 
+    // Tạo popup
     const popup = document.createElement('div');
     popup.classList.add('popup');
     popup.innerHTML = `
@@ -55,7 +47,7 @@ function showPopup(message, redirect = false) {
 
         // Nếu cần chuyển hướng
         if (redirect) {
-            window.location.href = 'index.html';
+            window.location.href = 'index.html'; // Chuyển đến trang chính
         }
     });
 }
