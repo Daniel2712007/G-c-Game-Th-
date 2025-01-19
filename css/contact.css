@@ -1,11 +1,4 @@
 /* General Styling */
-main.main-page {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #0b0c2a;
-    color: white;
-}
-
 main.main-page h2,
 h3,
 h4,
@@ -35,6 +28,13 @@ main.main-page h5 {
 
 main.main-page h6 {
     font-size: 16px;
+}
+
+main.main-page {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0b0c2a;
+    color: white;
 }
 
 /* Header */
@@ -70,6 +70,7 @@ main.main-page .team-container {
     flex-wrap: wrap;
     gap: 20px;
     padding: 20px;
+    overflow: visible; /* Đảm bảo nội dung không bị cắt */
 }
 
 main.main-page .team-member {
@@ -80,6 +81,8 @@ main.main-page .team-member {
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s;
+    height: auto; /* Tự điều chỉnh chiều cao */
+    overflow: visible; /* Đảm bảo nội dung không bị cắt */
 }
 
 main.main-page .team-member:hover {
@@ -111,43 +114,27 @@ main.main-page a {
 }
 
 /* Social Login Buttons */
-main.main-page .team-member .login__social__links {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: stretch;
-    height: 150px;
-    gap: 10px;
-}
-
 main.main-page .team-member .login__social__links ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
 }
 
 main.main-page .team-member .login__social__links ul li {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     margin: 5px 0;
 }
 
 main.main-page .team-member .login__social__links ul li a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+    display: flex; /* Flexbox căn chỉnh */
+    align-items: center; /* Căn giữa icon và chữ theo chiều dọc */
+    justify-content: center; /* Căn giữa nội dung theo chiều ngang */
+    gap: 10px; /* Khoảng cách giữa icon và chữ */
     width: 100%;
     padding: 10px;
     font-size: 14px;
     text-align: center;
     text-transform: uppercase;
+    margin: 5px 0;
     border-radius: 5px;
     color: #fff;
     transition: all 0.3s ease;
@@ -155,8 +142,8 @@ main.main-page .team-member .login__social__links ul li a {
 
 /* Icon Styling */
 main.main-page .team-member .login__social__links ul li a i {
-    font-size: 16px;
-    line-height: 1;
+    font-size: 16px; /* Đồng bộ kích thước icon */
+    line-height: 1; /* Đảm bảo icon nằm ở giữa */
 }
 
 /* Button Colors */
