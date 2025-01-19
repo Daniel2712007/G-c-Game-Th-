@@ -6,7 +6,7 @@ document.querySelector('form').addEventListener('submit', function (event) {
     const displayName = document.querySelector('input[placeholder="Tên hiển thị"]').value.trim();
     const username = document.querySelector('input[placeholder="Tên tài khoản"]').value.trim();
     const dob = document.querySelector('input[type="date"]').value.trim();
-    const password = document.querySelector('input[placeholder="mật khẩu"]').value.trim();
+    const password = document.querySelector('input[placeholder="Mật khẩu"]').value.trim();
     const confirmPassword = document.querySelector('input[placeholder="Xác nhận mật khẩu"]').value.trim();
 
     // Kiểm tra các trường
