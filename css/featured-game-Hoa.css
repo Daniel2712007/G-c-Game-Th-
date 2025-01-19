@@ -63,9 +63,9 @@
 /* Hiển thị các tag như "Hoạt động" và "Trả phí" */
 .product__item__text_Hoa ul li {
     display: inline-block;
-    font-size: 12px;
-    background: #ff5c5c;
-    color: #fff;
+    font-size: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
     padding: 2px 8px;
     border-radius: 5px;
 }
