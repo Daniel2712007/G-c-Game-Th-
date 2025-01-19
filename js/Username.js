@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log("Phần tử #name được tìm thấy.");
     nameInput.addEventListener("input", function() {
       // Chỉ cho phép ký tự chữ và số, loại bỏ khoảng trắng và dấu câu
-      this.value = this.value.replace(/[^a-zA-Z0-9()\-_+=\[\]{}:;'"<>.,\\|?/ !@#$%^&*]/g, '');
+      this.value = this.value.replace(/[^a-zA-Z0-9()\-_+=\[\]{}:;'"<>.,\\|?/!@#$%^&*]/g, '');
       console.log("Giá trị sau khi nhập:", this.value);
     });
   } else {
